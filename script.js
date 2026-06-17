@@ -349,8 +349,13 @@ if (contactForm) {
       btnLoading.style.display = "inline-block";
       submitBtn.disabled = true;
 
+      const API_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:5000"
+          : "https://my-portfolio-j6pn.onrender.com";
+
       const response = await fetch(
-        "http://localhost:5000/api/contact",
+        `${API_URL}/api/contact`,
         {
           method: "POST",
           headers: {
@@ -478,7 +483,12 @@ if (contactForm) {
     const typingEl = showTyping();
 
     try {
-      const res = await fetch('http://localhost:5000/api/chat', {
+      const API_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:5000"
+          : "https://my-portfolio-j6pn.onrender.com";
+
+      const res = await fetch('${API_URL}/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: msg })

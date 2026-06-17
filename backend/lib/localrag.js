@@ -1,5 +1,5 @@
 /**
- * lib/localRag.js — 100% FREE RAG engine (no external API calls)
+ * lib/localrag.js — 100% FREE RAG engine (no external API calls)
  *
  * How it works:
  *  1. Knowledge base is split into chunks (data/knowledge.js)

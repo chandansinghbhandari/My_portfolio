@@ -16,9 +16,9 @@
 A modern, AI-powered developer portfolio built to showcase projects, skills, and professional experience through an interactive and visually engaging experience.
 
 
-🤖 **AI Assistant:** Powered by Groq + Custom Knowledge Base
-📂 **Backend API:** Node.js + Express + MongoDB
-🎨 **Frontend:** HTML, CSS, JavaScript
+-🤖 **AI Assistant:** Powered by Groq + Custom Knowledge Base  
+-📂 **Backend API:** Node.js + Express + MongoDB  
+-🎨 **Frontend:** HTML, CSS, JavaScript  
 
 ---
 

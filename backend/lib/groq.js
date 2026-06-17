@@ -24,7 +24,7 @@
 
 'use strict';
 
-const { retrieve, detectIntent, isLeadIntent, generateReply } = require('./localRag');
+const { retrieve, detectIntent, isLeadIntent, generateReply } = require('./localrag');
 
 // ── Lazy Groq client (OpenAI SDK pointed at Groq's endpoint) ──
 let groqClient = null;

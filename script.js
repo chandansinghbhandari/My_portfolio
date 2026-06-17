@@ -494,12 +494,20 @@ if (contactForm) {
         body: JSON.stringify({ message: msg })
       });
 
+      console.log("Response Status:", res.status);
+
       const data = await res.json();
       typingEl.remove();
       appendMessage('ai', data.reply || "I'm here to help! Ask me about Chandan's projects, skills, or services.");
     } catch (err) {
+      // typingEl.remove();
+      // // Fallback responses for demo
+      // const fallbacks = getFallbackResponse(msg);
+      // appendMessage('ai', fallbacks);
+      console.error("Chatbot Error:", err);
+
       typingEl.remove();
-      // Fallback responses for demo
+
       const fallbacks = getFallbackResponse(msg);
       appendMessage('ai', fallbacks);
     }

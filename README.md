@@ -1,8 +1,21 @@
+
 # 🚀 Chandan Singh Bhandari — Developer Portfolio
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge)](https://your-portfolio.vercel.app)
+
+![HTML](https://img.shields.io/badge/HTML-5-orange)
+![CSS](https://img.shields.io/badge/CSS-3-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![Groq](https://img.shields.io/badge/AI-Groq-red)
+
+<p align="center">
+  <img src="./assets/portfolio-preview.png" width="100%">
+</p>
 
 A modern, AI-powered developer portfolio built to showcase projects, skills, and professional experience through an interactive and visually engaging experience.
 
-🌐 **Live Portfolio:** https://chandan-portfolio-indol-gamma.vercel.app/
+
 🤖 **AI Assistant:** Powered by Groq + Custom Knowledge Base
 📂 **Backend API:** Node.js + Express + MongoDB
 🎨 **Frontend:** HTML, CSS, JavaScript

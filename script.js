@@ -488,7 +488,7 @@ if (contactForm) {
           ? "http://localhost:5000"
           : "https://my-portfolio-j6pn.onrender.com";
 
-      const res = await fetch('${API_URL}/api/chat', {
+      const res = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: msg })

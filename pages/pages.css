@@ -1,0 +1,149 @@
+/* Pages supplement CSS */
+
+.case-study-page {
+  padding: 120px 0 80px;
+  min-height: 80vh;
+}
+
+.page-hero {
+  padding: 140px 0 60px;
+  background: var(--bg);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-3);
+  margin-bottom: 48px;
+  transition: color 0.2s;
+  letter-spacing: 0.05em;
+}
+.back-link:hover { color: var(--accent); }
+
+/* Case Study Styles */
+.cs-header { margin-bottom: 56px; }
+.cs-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.cs-hero-image {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  margin-bottom: 64px;
+  border: 1px solid var(--border-2);
+}
+.cs-body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 64px;
+  align-items: start;
+}
+.cs-section { margin-bottom: 48px; }
+.cs-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cs-section h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.cs-section p {
+  color: var(--text-2);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+.cs-aside {
+  position: sticky;
+  top: 100px;
+}
+.cs-info-card {
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-bottom: 20px;
+}
+.cs-info-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 14px;
+}
+.cs-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cs-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+}
+.cs-tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cs-impact-card {
+  background: rgba(74,222,128,0.06);
+  border: 1px solid rgba(74,222,128,0.2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+.cs-impact-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  margin-bottom: 12px;
+}
+.impact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+  padding: 6px 0;
+}
+.impact-item::before {
+  content: '↑';
+  color: #4ade80;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .cs-body { grid-template-columns: 1fr; }
+  .cs-aside { position: static; }
+  .cs-hero-image { height: 240px; font-size: 4rem; }
+}

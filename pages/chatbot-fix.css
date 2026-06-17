@@ -1,0 +1,85 @@
+/* ============================================================
+   chatbot-fix.css — PATCH for layout bugs seen in screenshot
+   Load this AFTER chatbot.css (it overrides the broken rules)
+   ============================================================ */
+
+/* Root cause #1: .cb-widget must be a fixed-position flex column
+   anchored bottom-right, with popup ABOVE the fab, both inside it.
+   If .cb-popup was escaping this container or had no max-height/
+   overflow, it stretches the whole page. */
+.cb-widget {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  left: auto !important;
+  top: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 14px !important;
+  z-index: 9999 !important;
+  width: auto !important;
+  max-width: calc(100vw - 32px);
+}
+
+/* Root cause #2: popup must have a fixed box with internal scroll,
+   not grow with content (that's what pushed it off-screen). */
+.cb-popup {
+  position: relative !important;
+  width: 380px !important;
+  max-width: calc(100vw - 32px);
+  height: 560px !important;
+  max-height: 75vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+}
+
+/* Messages area scrolls internally — never the page */
+.cb-messages {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+}
+
+/* Footer & header must not shrink */
+.cb-header, .cb-footer {
+  flex-shrink: 0 !important;
+}
+
+/* Suggestions row should not force extra height */
+.cb-suggestions {
+  flex-shrink: 0 !important;
+  max-height: 90px;
+  overflow-y: auto;
+}
+
+/* FAB always fixed size, never stretched by flex */
+.cb-fab {
+  flex-shrink: 0 !important;
+  width: 60px !important;
+  height: 60px !important;
+}
+
+/* When closed, hide popup completely (don't just opacity:0 — 
+   that still occupies layout space and can overlap content) */
+.cb-popup:not(.cb-open) {
+  display: none !important;
+}
+.cb-widget.open .cb-popup {
+  display: flex !important;
+}
+
+/* Mobile: full-width bottom sheet style */
+@media (max-width: 480px) {
+  .cb-widget {
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+  .cb-popup {
+    width: calc(100vw - 24px) !important;
+    height: 70vh !important;
+  }
+}
